@@ -19,6 +19,6 @@ see also:
 - create new repo (main) if e.g. R package
 - edit read me and issues
 - go to correct local path
-- clone repo: git git@github.com:vaakaruode/VaakaR.git
+- clone repo: git clone git@github.com:vaakaruode/VaakaR.git
 - changes
 - push with correct git account
