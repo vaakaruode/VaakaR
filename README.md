@@ -22,3 +22,4 @@ see also:
 - clone repo: git clone git@github.com:vaakaruode/VaakaR.git
 - changes
 - push with correct git account
+  - git push git@github-vaakaruode:vaakaruode/vaakaruode.github.io.git
