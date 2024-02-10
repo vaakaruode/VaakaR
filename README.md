@@ -23,3 +23,14 @@ see also:
 - changes
 - push with correct git account
   - git push git@github-vaakaruode:vaakaruode/vaakaruode.github.io.git
+- go to Rstudio
+  - create new project: e.g. /vaakaruode-git/VaakaR path
+    - note create R package was not available for some reason
+  - open new Session
+  - start coding in project vaakaR.
+    - setwd(.. "/vaakaruode-git/")
+    - getwd()
+    - usethis::create_package("VaakaR")
+    - overwrite existing VaakaR.Rproj
+
+  
