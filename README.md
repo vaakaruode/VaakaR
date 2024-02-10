@@ -13,3 +13,12 @@ see also:
 - ggplot2: For data visualization
 - [quarto](https://quarto.org/docs/computations/r.html): PDF and HTML
 - [DiagrammerR](https://rich-iannone.github.io/DiagrammeR/)https://rich-iannone.github.io/DiagrammeR/
+
+## How To
+
+- create new repo (main) if e.g. R package
+- edit read me and issues
+- go to correct local path
+- clone repo: git git@github.com:vaakaruode/VaakaR.git
+- changes
+- push with correct git account
