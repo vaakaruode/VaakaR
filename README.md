@@ -22,7 +22,7 @@ see also:
 - clone repo: git clone git@github.com:vaakaruode/VaakaR.git
 - changes
 - push with correct git account
-  - git push git@github-vaakaruode:vaakaruode/vaakaruode.github.io.git
+  - git push git@github-vaakaruode:vaakaruode/vaakaR
 - go to Rstudio
   - create new project: e.g. /vaakaruode-git/VaakaR path
     - note create R package was not available for some reason
