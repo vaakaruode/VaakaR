@@ -47,6 +47,11 @@ see also:
     * This warning message is indicating that there's a difference in line endings (LF, which stands for Line Feed, versus CRLF, which stands for Carriage Return Line Feed) between what Git expects and what is currently in your file.
     * Git Warning: When you try to commit these changes, Git warns you that it will convert the line endings from LF to CRLF the next time it touches the file, meaning it will change the line endings to match the configured settings of the repository.
     * You can configure Git to handle line endings automatically using the core.autocrlf and core.eol settings.
+  * To cancel a commit that you haven't yet pushed to a remote repository, you can use the following Git command:
+    * git reset HEAD~1 (e.g. in case of wrong user on computer)
+  * git status
+  * If you have already pushed the commit to a remote repository and want to undo it, you can use the following command:
+    * git revert HEAD
 
     
 
