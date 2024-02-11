@@ -52,6 +52,8 @@ see also:
   * git status
   * If you have already pushed the commit to a remote repository and want to undo it, you can use the following command:
     * git revert HEAD
+  * git push git@github-vaakaruode:vaakaruode/VaakaR main
+    * This command pushes the main branch to the vaakaruode/VaakaR repository using the SSH URL directly.
 
 #### Hard reset
 
