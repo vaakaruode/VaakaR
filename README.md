@@ -1,6 +1,8 @@
 # VaakaR
-R package "VaakaR" is specifically focuses on CSV data processing, data flows, and is tailored for law studies and the construction field.
 
+The "VaakaR" R package is designed to facilitate efficient CSV data processing and streamline data workflows, offering tailored solutions for both law studies and the construction field. With a comprehensive suite of functions and utilities, "VaakaR" empowers users to seamlessly handle large datasets, perform complex analyses, and generate insightful visualizations. Whether you're conducting legal research, analyzing building specifications, or managing project data, "VaakaR" provides the tools and functionality you need to enhance productivity and gain valuable insights from your data. From data cleaning and manipulation to advanced statistical modeling and reporting, "VaakaR" is your all-in-one solution for data management and analysis in the legal and construction domains.
+
+Disclaimer: The "VaakaR" R package is provided as-is, without any warranty, express or implied. The developers of "VaakaR" make no representations or warranties regarding the accuracy, completeness, or reliability of the package or its functionality. The use of "VaakaR" is at your own risk, and the developers shall not be liable for any damages or losses arising from the use of the package. Users are encouraged to review and verify the results obtained from "VaakaR" before making any decisions or taking any actions based on the package's output. Additionally, please note that the package is intended for informational and educational purposes only and should not be construed as professional advice. By using "VaakaR," you agree to indemnify and hold harmless the developers from any claims, damages, or liabilities arising out of your use of the package.
 
 ## R Packages
 
