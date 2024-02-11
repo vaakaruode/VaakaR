@@ -5,7 +5,7 @@
 setwd("C:/Users/talon/vaakaruode-git/")
 getwd()
 # ...............................................................
-usethis::create_package("VaakaR")
+# Only once: usethis::create_package("VaakaR")
 # ...............................................................
 if (FALSE) {
   # create manually (or mkdir) path to libs and run:
@@ -110,13 +110,14 @@ getwd()
 base::detach(package:VaakaR, unload = TRUE)
 p.description.version.number <- '0.0.0.9000'
 p.description.version.number <- '0.0.0.9241002'
+p.description.version.number <- '0.02.11'
 .libPaths()
 path2package <- paste0(p.path.git, p.package.name,"_",p.description.version.number,".tar.gz")
 path2package
 # arguments needed when installing from source:
 setwd(p.path.git)
 install.packages(path2package, source = TRUE, repos = NULL) # use the same version number as in DESCRIPTION
-library(VaakaR)
+# library(VaakaR) # do not take into use
 
 # av <- available.packages(filters=list())
 

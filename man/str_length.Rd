@@ -6,6 +6,9 @@
 \usage{
 str_length(string)
 }
+\arguments{
+\item{string}{string}
+}
 \value{
 A numeric vector giving number of characters (code points) in each
 element of the character vector. Missing string have missing length.
