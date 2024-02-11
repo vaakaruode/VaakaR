@@ -2,6 +2,44 @@
 # main_VaakaR_package_creation.R
 # 1) Top-right corner - new project, create folder, create git repo
 # ...............................................................
+if (!require(devtools)) install.packages("devtools")
+library(devtools)
+
+if (!require(testthat)) install.packages("testthat")
+library(testthat)
+
+if (!require(pkgdown)) install.packages("pkgdown")
+library(pkgdown)
+
+library(Rcpp)
+
+p.path.git <- "C:/Users/talon/vaakaruode-git/" # Asus
+p.package.name <- "VaakaR"
+setwd(p.path.git)
+devtools::document(p.package.name)
+pkgdown::build_reference_index(pkg = "VaakaR")
+pkgdown::build_news(pkg = "VaakaR")
+devtools::check(p.package.name)
+devtools::build(p.package.name)
+# ...............................................................
+base::detach(package:VaakaR, unload = TRUE)
+#p.description.version.number <- '0.0.0.9000'
+#p.description.version.number <- '0.0.0.9241002'
+#p.description.version.number <- '0.02.11'
+p.description.version.number <- '0.02.12'
+setwd(p.path.git)
+path2package <- paste0(p.path.git, p.package.name,"_",p.description.version.number,".tar.gz")
+install.packages(path2package, source = TRUE, repos = NULL) # use the same version number as in DESCRIPTION
+# ...............................................................
+setwd(p.path.git)
+pkgdown::build_site("VaakaR") # after build. If failing - install new package
+# ...............................................................
+
+
+
+
+
+# ...............................................................
 setwd("C:/Users/talon/vaakaruode-git/")
 getwd()
 # ...............................................................
@@ -94,7 +132,6 @@ if (FALSE) {
 # once: pkgdown::build_favicons(pkg = "VaakaR", overwrite = TRUE)
 setwd(p.path.git)
 devtools::document(p.package.name)
-
 devtools::check(p.package.name)
 
 # pkgdown::build_reference_index(pkg = "VaakaR", lazy = FALSE, run_dont_run = FALSE)

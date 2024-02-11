@@ -9,6 +9,7 @@ create_email_as_json(
   addmainbrackets = TRUE,
   savejson = TRUE,
   file_path = NULL,
+  writewith = "file_conn",
   info = FALSE
 )
 }
@@ -21,6 +22,8 @@ create_email_as_json(
 
 \item{file_path}{file_path}
 
+\item{writewith}{writewith}
+
 \item{info}{info}
 }
 \value{
@@ -29,6 +32,20 @@ A JSON string representing the email data without brackets around single element
 \description{
 This function converts email data stored in a list to JSON format.
 }
+\section{Changes in version 0.02.12}{
+
+\itemize{
+\item UTF-8 encoding
+}
+}
+
+\section{Changes in version 0.02.11}{
+
+\itemize{
+\item Initial release
+}
+}
+
 \examples{
 emails <- list(
   date = "2024-02-11T09:30:00",

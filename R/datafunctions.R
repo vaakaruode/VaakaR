@@ -12,11 +12,16 @@
 #' @param addmainbrackets addmainbrackets
 #' @param savejson savejson
 #' @param file_path file_path
+#' @param writewith writewith
 #' @param info info
 #' @return A JSON string representing the email data without brackets around single elements.
 #' @importFrom jsonlite toJSON fromJSON
 #' @export
 #' @rdname create_email_as_json
+#' @section Changes in version 0.02.12:
+#' - UTF-8 encoding
+#' @section Changes in version 0.02.11:
+#' - Initial release
 #' @examples
 #' emails <- list(
 #'   date = "2024-02-11T09:30:00",
@@ -32,7 +37,12 @@
 #'  create_email_as_json(emails)
 #' }
 # .........................................................................
-create_email_as_json <- function(emails = NULL, addmainbrackets = TRUE, savejson = TRUE, file_path = NULL, info = FALSE) {
+create_email_as_json <- function(emails = NULL,
+                                 addmainbrackets = TRUE,
+                                 savejson = TRUE,
+                                 file_path = NULL,
+                                 writewith = "file_conn",
+                                 info = FALSE) {
 
   json_all <- ""
 
@@ -96,12 +106,22 @@ create_email_as_json <- function(emails = NULL, addmainbrackets = TRUE, savejson
     } else {
       print(paste("Saved to:", file_path))
       # Save JSON to file
-      base::writeLines(json_all, file_path)
+      if (writewith == "file_conn") {
+        # Open the file with UTF-8 encoding
+        file_conn <- file(file_path, "w", encoding = "UTF-8")
+
+        # Write text to file
+        writeLines(json_all, file_conn)
+
+        # Close the file connection
+        close(file_conn)
+      } else {
+        base::writeLines(json_all, file_path)
+      }
+
     }
   }
 }
 # .........................................................................
-#' @rdname create_email_as_json
-#' @section Changes in version 0.02.11:
-#' - Initial release
+
 # .........................................................................

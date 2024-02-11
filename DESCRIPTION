@@ -1,6 +1,6 @@
 Package: VaakaR
 Title: Tailored package for law studies and the construction field
-Version: 0.02.11
+Version: 0.02.12
 Authors@R: 
     person("Jaakko", "Talonen", , "vaakaruode@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-9536-6766"))
