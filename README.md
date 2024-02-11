@@ -53,5 +53,50 @@ see also:
   * If you have already pushed the commit to a remote repository and want to undo it, you can use the following command:
     * git revert HEAD
 
-    
+#### Hard reset
+
+Reset the Branch (if you haven't shared it with others):
+If you're confident that no one else has pulled the changes you want to undo, you can reset the branch to the commit before the one you want to undo.
+
+WARNING: This option rewrites history, and it's generally not recommended if you've already shared your changes with others.
+
+* $ git add .
+  * warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+
+* $ git commit -m "git instructions and testing revert HEAD test3"
+  * [main fcc6258] git instructions and testing revert HEAD test3
+  * 1 file changed, 1 insertion(+)
+
+* $ git push -f git@github-vaakaruode:vaakaruode/VaakaR
+  * Enumerating objects: 5, done.
+  * Counting objects: 100% (5/5), done.
+  * Delta compression using up to 8 threads
+  * Compressing objects: 100% (3/3), done.
+   * Writing objects: 100% (3/3), 341 bytes | 341.00 KiB/s, done.
+   * Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+   * remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+   * To github-vaakaruode:vaakaruode/VaakaR
+      * b121649..fcc6258  main -> main
+
+#### Remove from github
+
+* $ git reset --hard HEAD~1
+  * HEAD is now at b121649 git instructions and testing revert HEAD test2
+
+* $ git push -f git@github-vaakaruode:vaakaruode/VaakaR
+  * Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+  * To github-vaakaruode:vaakaruode/VaakaR
+  *  + fcc6258...b121649 main -> main (forced update)
+
+* $ git status
+* On branch main
+* Your branch is ahead of 'origin/main' by 4 commits.
+  *  (use "git push" to publish your local commits)
+  * nothing to commit, working tree clean
+
+
+File changes were removed from github: "git instructions and testing revert HEAD test3"
+The latest is test2 at: https://github.com/vaakaruode/VaakaR/commits/main/README.md
+
+
 
