@@ -1,10 +1,11 @@
 Package: VaakaR
 Title: Tailored package for law studies and the construction field
-Version: 0.02.12
+Version: 0.02.14
 Authors@R: 
     person("Jaakko", "Talonen", , "vaakaruode@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-9536-6766"))
-Description: specifically focuses on CSV data processing.
+Description: specifically focuses on CSV and json data processing.
+HexSticker: docs/VaakaRsticker.png
 License: MIT + file LICENSE
 Encoding: UTF-8
 Imports: data.table,

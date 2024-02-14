@@ -5,26 +5,38 @@
 \title{Convert Email Data to JSON}
 \usage{
 create_email_as_json(
-  emails = NULL,
+  data = NULL,
+  sort.by.decreasing.datetime = FALSE,
+  rename_duplicate_id = TRUE,
   addmainbrackets = TRUE,
   savejson = TRUE,
   file_path = NULL,
+  catdata = FALSE,
   writewith = "file_conn",
-  info = FALSE
+  info = TRUE,
+  debug_info = FALSE
 )
 }
 \arguments{
-\item{emails}{A list containing email data.}
+\item{data}{A list containing email or any kind of list data in R that you want to convert into json-format.}
 
-\item{addmainbrackets}{addmainbrackets}
+\item{sort.by.decreasing.datetime}{sort.by.decreasing.datetime default NULL, TRUE = desc i.e. decreasing, FALSE = asc i.e. incresing.}
 
-\item{savejson}{savejson}
+\item{rename_duplicate_id}{rename_duplicate_id if duplicate id values, these are corrected automatically. Note, it is recommend not to have duplicate id values, otherwise linking between objects may not work.}
 
-\item{file_path}{file_path}
+\item{addmainbrackets}{Add start and end brackets to the output. Default is TRUE.}
 
-\item{writewith}{writewith}
+\item{savejson}{Do you want to save json, default is TRUE.}
 
-\item{info}{info}
+\item{file_path}{The full path to the file. Remember to include \emph{.json}.}
+
+\item{catdata}{print output in the R Console. Default FALSE.}
+
+\item{writewith}{writewith defines encoding, default is "file_conn" using UTF-8.}
+
+\item{info}{show informative output on Console. Default: TRUE}
+
+\item{debug_info}{show debug output on Console. Default: FALSE}
 }
 \value{
 A JSON string representing the email data without brackets around single elements.
@@ -32,6 +44,16 @@ A JSON string representing the email data without brackets around single element
 \description{
 This function converts email data stored in a list to JSON format.
 }
+\section{Changes in version 0.02.14}{
+
+\itemize{
+\item json output comma bug fixed, it was missing between objects in the generated array.
+\item sort by datetime and process creates \emph{posixct} key to each object. If not NULL: \emph{sort.by.decreasing.datetime}.
+\item duplicate rename process, see argument: \emph{rename_duplicate_id}.
+\item input argument \emph{emails} changed to more general \emph{data}.
+}
+}
+
 \section{Changes in version 0.02.12}{
 
 \itemize{
@@ -58,6 +80,6 @@ emails <- list(
   keywords = c("follow-up", "meeting", "thanks")
 )
 \dontrun{
- create_email_as_json(emails)
+ create_email_as_json(data = emails)
 }
 }

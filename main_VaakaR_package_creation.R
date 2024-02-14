@@ -2,6 +2,17 @@
 # main_VaakaR_package_creation.R
 # 1) Top-right corner - new project, create folder, create git repo
 # ...............................................................
+
+.libPaths(c("C:/Rlib",.libPaths()))
+.libPaths()
+
+
+# added to .Rbuidignore (2/2024)
+# ^main_VaakaR_package_creation.R
+# ^inst$
+# inst folder: HexSticker: inst/hexbin/VaakaRsticker.png
+# ...............................................................
+
 if (!require(devtools)) install.packages("devtools")
 library(devtools)
 
@@ -16,6 +27,9 @@ library(Rcpp)
 p.path.git <- "C:/Users/talon/vaakaruode-git/" # Asus
 p.package.name <- "VaakaR"
 setwd(p.path.git)
+
+# shell.exec(p.path.git)
+
 devtools::document(p.package.name)
 pkgdown::build_reference_index(pkg = "VaakaR")
 pkgdown::build_news(pkg = "VaakaR")
@@ -23,17 +37,25 @@ devtools::check(p.package.name)
 devtools::build(p.package.name)
 # ...............................................................
 base::detach(package:VaakaR, unload = TRUE)
+# use the same version number as in DESCRIPTION
 #p.description.version.number <- '0.0.0.9000'
 #p.description.version.number <- '0.0.0.9241002'
 #p.description.version.number <- '0.02.11'
-p.description.version.number <- '0.02.12'
+# p.description.version.number <- '0.02.12'
+p.description.version.number <- '0.02.14'
 setwd(p.path.git)
+# ...............................................................
 path2package <- paste0(p.path.git, p.package.name,"_",p.description.version.number,".tar.gz")
-install.packages(path2package, source = TRUE, repos = NULL) # use the same version number as in DESCRIPTION
+install.packages(path2package, lib = "C:/Rlib", source = TRUE, repos = NULL)
 # ...............................................................
 setwd(p.path.git)
 pkgdown::build_site("VaakaR") # after build. If failing - install new package
 # ...............................................................
+
+
+
+
+
 
 
 

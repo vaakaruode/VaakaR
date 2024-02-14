@@ -4,6 +4,8 @@ The "VaakaR" R package is designed to facilitate efficient CSV data processing a
 
 Disclaimer: The "VaakaR" R package is provided as-is, without any warranty, express or implied. The developers of "VaakaR" make no representations or warranties regarding the accuracy, completeness, or reliability of the package or its functionality. The use of "VaakaR" is at your own risk, and the developers shall not be liable for any damages or losses arising from the use of the package. Users are encouraged to review and verify the results obtained from "VaakaR" before making any decisions or taking any actions based on the package's output. Additionally, please note that the package is intended for informational and educational purposes only and should not be construed as professional advice. By using "VaakaR," you agree to indemnify and hold harmless the developers from any claims, damages, or liabilities arising out of your use of the package.
 
+![Package Logo](VaakaRsticker.png)
+
 ## R Packages
 
 see also:
