@@ -7,12 +7,12 @@
   - HexSticker: *inst/hexbin/VaakaRsticker.png*
     - "In the world of data analysis, VaakaR has emerged as a symbol of precision and insight. Its hex sticker and logo were meticulously designed, featuring a hexagonal pattern representing stability and clarity in yellow. Light blue fonts ensure readability. At the center of the design, the determined woman's face reflects the package's dedication to analysis. Behind her stands a steadfast house, symbolizing the foundation of data-driven decision-making. Refined through feedback, VaakaR's visual identity now stands as a testament to empowering data enthusiasts on their analytical journeys, anchored by the principles of clarity, stability, and determination." - VaakaR Art Director
     - HexSticker copied also to docs/ folder (ref from README.md)
-      - removed from: *inst/hexbin/VaakaRsticker.png*
+      - removed and added back to: *inst/hexbin/VaakaRsticker.png*
       - in DESCRIPTION: HexSticker: docs/VaakaRsticker.png 
   - updated: *.Rbuidignore* 
     - ^docs$ (directory is necessary for your package and contains relevant documentation)
     - ^main_VaakaR_package_creation.R
-    - ^inst$ (deleted: no need for this folder)
+    - ^inst$ (not deleted: note that docs-folder is not in git)
 * Path for library (Rstudio)
   * "C:/Rlib" created
   * `.libPaths(c("C:/Rlib",.libPaths()))`

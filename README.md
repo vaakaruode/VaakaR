@@ -6,6 +6,8 @@ Disclaimer: The "VaakaR" R package is provided as-is, without any warranty, expr
 
 ![Package Logo](VaakaRsticker.png)
 
+![Package Logo](inst/hexbin/VaakaRsticker.png)
+
 ## R Packages
 
 see also:
